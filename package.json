@@ -20,6 +20,8 @@
         "lightningcss-linux-x64-gnu": "^1.29.1"
     },
     "devDependencies": {
-        "@vitejs/plugin-basic-ssl": "^2.3.0"
+        "@vitejs/plugin-basic-ssl": "^2.3.0",
+        "tailwind-animations": "^1.0.1",
+        "tailwindcss-animate": "^1.0.7"
     }
 }

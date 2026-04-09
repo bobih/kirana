@@ -3,19 +3,19 @@ import {
 } from 'vite';
 import laravel from 'laravel-vite-plugin';
 import tailwindcss from "@tailwindcss/vite";
+import tailwindAnimations from 'tailwind-animations';
 
 export default defineConfig({
     plugins: [
         laravel({
-            detectTls: 'khrisna.net', 
             input: ['resources/css/app.css', 'resources/js/app.js'],
             refresh: true,
         }),
-        tailwindcss(),
+         tailwindcss({ // V4 config
+            plugins: [tailwindAnimations], // Add this
+        }),
     ],
     server: {
-        https: true, // Forces Vite to use HTTPS
-        host: 'khrisna.net',
         cors: true,
         watch: {
             ignored: ['**/storage/framework/views/**'],
