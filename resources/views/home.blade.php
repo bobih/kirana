@@ -25,7 +25,7 @@
 
             <div class="mx-auto max-w-2xl lg:mx-0">
                 <div class='animate-jelly animate-duration-slow'>
-                    <h2 class="text-5xl font-semibold tracking-tight text-white sm:text-7xl">Creative Porfolio</h2>
+                    <h2 class="text-5xl font-semibold tracking-tight text-white sm:text-7xl">Creative Porfolio R2</h2>
                 </div>
                 <p class="mt-8 text-lg font-medium text-pretty text-gray-300 sm:text-xl/8">kirana Ayu Khrisna
                     (@kiranagkpr)</p>
