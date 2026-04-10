@@ -24,7 +24,7 @@
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
 
             <div class="mx-auto max-w-2xl lg:mx-0">
-                <div class='animate-slide-in-left animate-delay-300 animate-duration-slow'>
+                <div class='animate-jelly animate-duration-slow'>
                     <h2 class="text-5xl font-semibold tracking-tight text-white sm:text-7xl">Creative Porfolio</h2>
                 </div>
                 <p class="mt-8 text-lg font-medium text-pretty text-gray-300 sm:text-xl/8">kirana Ayu Khrisna
@@ -49,33 +49,33 @@
                 <dl class="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
 
                     <a href="#">
-                        <div class="flex flex-col-reverse gap-1">
+                        <div class="animate-jelly animate-delay-500 animate-duration-slow flex flex-col-reverse gap-1">
                             <dt class="text-base/7 text-gray-300">Watercolor</dt>
                             <dd class="text-4xl font-semibold tracking-tight text-white">12</dd>
                         </div>
                     </a>
 
-                    <div class="flex flex-col-reverse gap-1">
+                    <div class="animate-jelly animate-delay-600 animate-duration-slow flex flex-col-reverse gap-1">
                         <dt class="text-base/7 text-gray-300">Digital Arts</dt>
                         <dd class="text-4xl font-semibold tracking-tight text-white">30+</dd>
                     </div>
-                    <div class="flex flex-col-reverse gap-1">
+                    <div class="animate-jelly animate-delay-700 animate-duration-slow flex flex-col-reverse gap-1">
                         <dt class="text-base/7 text-gray-300">Poster</dt>
                         <dd class="text-4xl font-semibold tracking-tight text-white">40</dd>
                     </div>
-                    <div class="flex flex-col-reverse gap-1">
+                    <div class="animate-jelly animate-delay-800 animate-duration-slow flex flex-col-reverse gap-1">
                         <dt class="text-base/7 text-gray-300">Instagram Feeds</dt>
                         <dd class="text-4xl font-semibold tracking-tight text-white">5</dd>
                     </div>
-                    <div class="flex flex-col-reverse gap-1">
+                    <div class="animate-jelly animate-delay-900 animate-duration-slow flex flex-col-reverse gap-1">
                         <dt class="text-base/7 text-gray-300">Merch</dt>
                         <dd class="text-4xl font-semibold tracking-tight text-white">20</dd>
                     </div>
-                    <div class="flex flex-col-reverse gap-1">
+                    <div class="animate-jelly animate-delay-1000 animate-duration-slow flex flex-col-reverse gap-1">
                         <dt class="text-base/7 text-gray-300">Others</dt>
                         <dd class="text-4xl font-semibold tracking-tight text-white">10</dd>
                     </div>
-                    <div class="flex flex-col-reverse gap-1">
+                    <div class="animate-jelly animate-delay-1100 animate-duration-slow flex flex-col-reverse gap-1">
                         <dt class="text-base/7 text-gray-300">Commisions</dt>
                         <dd class="text-4xl font-semibold tracking-tight text-white"></dd>
                     </div>
@@ -187,11 +187,14 @@
                 </div>
             </div>
             <div class="text-center">
-                <h1 class="text-5xl font-semibold tracking-tight text-balance text-white sm:text-7xl">Data to enrich
-                    your online business</h1>
+                <div class="timeline-view animate-slide-in-left animate-range-[entry_20%_contain_20%] ">
+                <h1 class=" text-5xl font-semibold tracking-tight text-balance text-white sm:text-7xl">Data to enrich
+                    your online business</h1> </div>
+                    <div class="timeline-view animate-fade-in-up animate-range-[entry_0%_cover_30%] ">
                 <p class="mt-8 text-lg font-medium text-pretty text-gray-400 sm:text-xl/8">Anim aute id magna aliqua
                     ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam
                     occaecat.</p>
+                </div>
                 <div class="mt-10 flex items-center justify-center gap-x-6">
                     <a href="#"
                         class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">Get
