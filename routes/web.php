@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::view('/', 'home')->name('home');
+Route::view('/', 'kirana')->name('home');
 
 /*
 Route::middleware(['auth', 'verified'])->group(function () {
