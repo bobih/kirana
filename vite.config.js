@@ -3,7 +3,6 @@ import {
 } from 'vite';
 import laravel from 'laravel-vite-plugin';
 import tailwindcss from "@tailwindcss/vite";
-import tailwindAnimations from 'tailwind-animations';
 
 export default defineConfig({
     plugins: [
@@ -11,9 +10,7 @@ export default defineConfig({
             input: ['resources/css/app.css', 'resources/js/app.js'],
             refresh: true,
         }),
-         tailwindcss({ // V4 config
-            plugins: [tailwindAnimations], // Add this
-        }),
+         tailwindcss(),
     ],
     server: {
         cors: true,
