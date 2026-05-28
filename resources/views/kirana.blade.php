@@ -1,14 +1,56 @@
 @php
-    // $catchcopy_line1 = $catchcopy_line1 ?? 'No.1 Dance';
-    // $catchcopy_line2 = $catchcopy_line2 ?? 'Vocal Unit';
-    $catchcopy_line1 = $catchcopy_line1 ?? 'Hello';
-    $catchcopy_line2 = $catchcopy_line2 ?? 'World';
+    $catchcopy_line1 = $catchcopy_line1 ?? 'Welcome to';
+    $catchcopy_line2 = $catchcopy_line2 ?? 'My World!';
+    $profile_title = $profile_title ?? 'Profil';
+    $profile_subtitle = $profile_subtitle ?? 'Siapa Gue!';
 @endphp
 <!DOCTYPE html>
 <html lang="ja" class="__variable_7073ab" style="--vh: 3.02px; --theme-color: #1ccaff; scroll-behavior: smooth;">
 <script>
     window.CATCHCOPY_LINE1 = "{{ $catchcopy_line1 }}";
     window.CATCHCOPY_LINE2 = "{{ $catchcopy_line2 }}";
+    window.PROFILE_TITLE = "{{ $profile_title }}";
+    window.PROFILE_SUBTITLE = "{{ $profile_subtitle }}";
+</script>
+<style>
+    /* Force catchcopy visibility to bypass intro/animation delays */
+    .top_keyvisual__catchcopy__inner {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        white-space: normal !important;
+    }
+
+    .top_keyvisual__catchcopy__line__EXQFd {
+        opacity: 1 !important;
+        visibility: visible !important;
+        display: block !important;
+        /* Ensure lines stack vertically */
+        width: 100% !important;
+    }
+
+    .top_keyvisual__catchcopy__text__SJo6t,
+    .c-splitText {
+        opacity: 1 !important;
+        visibility: visible !important;
+        display: inline-block !important;
+    }
+
+    /* Ensure no transparent overlays are blocking the view */
+    [data-intro="0"] .top_keyvisual__TJ2oe {
+        pointer-events: none !important;
+    }
+</style>
+<script>
+    window.addEventListener('load', function () {
+        // Wake up the animation engine
+        document.body.setAttribute('data-intro', '1');
+        document.body.setAttribute('data-pagestart', '1');
+        window.dispatchEvent(new Event('resize'));
+
+        // Optional: simulate a click to satisfy any "user gesture" requirements
+        document.documentElement.click();
+    });
 </script>
 <link type="text/css" id="dark-mode" rel="stylesheet" href="">
 <style type="text/css" id="dark-mode-сustom-style"></style>
@@ -68,7 +110,7 @@
     <link rel="preload" href="{{ url('assets/img/top/keyvisual/ph_chara2.png') }}" as="image" fetchpriority="high">
 </head>
 
-<body class="top" data-pagestart="1" data-intro="0" data-theme="water">
+<body class="top" data-pagestart="1" data-intro="1" data-theme="water">
     <script src="{{ url('_next/static/chunks/webpack-77e271fbdb558673.js') }}" async=""></script>
     <script>
         (self.__next_f = self.__next_f || []).push([0]);
@@ -139,7 +181,7 @@
         data-nscript="afterInteractive"></script><next-route-announcer
         style="position: absolute;"></next-route-announcer>
     <div class="l-wrapper">
-        <div class="l-pagebg" data-in="0">
+        <div class="l-pagebg" data-in="1">
             <div class="l-pagebg__layer">
                 <div class="l-pagebg__strip -black"></div>
                 <div class="l-pagebg__strip -black"></div>
@@ -170,29 +212,35 @@
         <main class="l-main">
             <div class="top_keyvisual__TJ2oe">
                 <div class="top_keyvisual__catchcopy___U4t4 c-font_aqva c-skew_rotate">
-                    <div class="undefined">
+                    <div class="top_keyvisual__catchcopy__inner">
                         <div class="top_keyvisual__catchcopy__line__EXQFd">
-                            <p data-text="dance" aria-label="{{ $catchcopy_line1 }}">
+                            <p data-text="dance" aria-label="{{ $catchcopy_line1 }}"
+                                style="opacity: 1; translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">
                                 <span class="top_keyvisual__catchcopy__text__SJo6t">
                                     @foreach(explode(' ', $catchcopy_line1) as $word)
-                                        <span aria-hidden="true">
+                                        <span aria-hidden="true" style="opacity: 1;">
                                             @foreach(mb_str_split($word) as $char)
-                                                <span class="c-splitText" aria-hidden="true">{{ $char }}</span>
+                                                <span class="c-splitText" aria-hidden="true"
+                                                    style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">{{ $char }}</span>
                                             @endforeach
                                         </span>
+                                        @if(!$loop->last) &nbsp; @endif
                                     @endforeach
                                 </span>
                             </p>
                         </div>
                         <div class="top_keyvisual__catchcopy__line__EXQFd">
-                            <p data-text="vocal" aria-label="{{ $catchcopy_line2 }}">
+                            <p data-text="vocal" aria-label="{{ $catchcopy_line2 }}"
+                                style="opacity: 1; translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">
                                 <span class="top_keyvisual__catchcopy__text__SJo6t">
                                     @foreach(explode(' ', $catchcopy_line2) as $word)
-                                        <span aria-hidden="true">
+                                        <span aria-hidden="true" style="opacity: 1;">
                                             @foreach(mb_str_split($word) as $char)
-                                                <span class="c-splitText" aria-hidden="true">{{ $char }}</span>
+                                                <span class="c-splitText" aria-hidden="true"
+                                                    style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">{{ $char }}</span>
                                             @endforeach
                                         </span>
+                                        @if(!$loop->last) &nbsp; @endif
                                     @endforeach
                                 </span>
                             </p>
@@ -286,22 +334,14 @@
                                             style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">s</span></span></span></a>
                         </li>
                         <li class="top_keyvisual__nav__item__6y3hf"><a href="{{ url('profile/') }}"
-                                aria-label="Profile"><span
+                                aria-label="{{ $profile_title }}"><span
                                     class="top_keyvisual__nav__item__inner__vyQFK c-hover_underline"><span
-                                        aria-hidden="true"><span class="c-splitText" aria-hidden="true"
-                                            style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">P</span><span
-                                            class="c-splitText" aria-hidden="true"
-                                            style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">r</span><span
-                                            class="c-splitText" aria-hidden="true"
-                                            style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">o</span><span
-                                            class="c-splitText" aria-hidden="true"
-                                            style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">f</span><span
-                                            class="c-splitText" aria-hidden="true"
-                                            style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">i</span><span
-                                            class="c-splitText" aria-hidden="true"
-                                            style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">l</span><span
-                                            class="c-splitText" aria-hidden="true"
-                                            style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">e</span></span></span></a>
+                                        aria-hidden="true">
+                                        @foreach(mb_str_split($profile_title) as $char)
+                                            <span class="c-splitText" aria-hidden="true"
+                                                style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">{{ $char }}</span>
+                                        @endforeach
+                                    </span></span></a>
                         </li>
                         <li class="top_keyvisual__nav__item__6y3hf"><a href="{{ url('discography/') }}"
                                 aria-label="Discography"><span
@@ -529,12 +569,13 @@
                     <div class="top_profile__main__PT_xB">
                         <div class="c-toptitle -profile c-font_aqva">
                             <div class="c-toptitle__main">
-                                <h2 class="c-toptitle__inner js-splittext"><span class="c-toptitle__line">Profile</span>
+                                <h2 class="c-toptitle__inner js-splittext"><span
+                                        class="c-toptitle__line">{{ $profile_title }}</span>
                                 </h2>
                             </div>
                             <div class="c-toptitle__sholder c-skew_rotate">
-                                <p class="c-toptitle__inner js-splittext"><span class="c-toptitle__line">Who we
-                                        are!</span></p>
+                                <p class="c-toptitle__inner js-splittext"><span
+                                        class="c-toptitle__line">{{ $profile_subtitle }}</span></p>
                             </div>
                         </div>
                         <div class="top_profile__more__e1410 c-hover_op"><a href="{{ url('profile/') }}"><img
@@ -718,7 +759,7 @@
                                 class="c-hover_underline">News</span></a>
                     </li>
                     <li class="l-footer__nav__item"><a href="{{ url('profile/') }}"><span
-                                class="c-hover_underline">Profile</span></a></li>
+                                class="c-hover_underline">{{ $profile_title }}</span></a></li>
                     <li class="l-footer__nav__item"><a href="{{ url('discography/') }}"><span
                                 class="c-hover_underline">Discography</span></a></li>
                     <li class="l-footer__nav__item"><a href="https://shop.nijisanji.jp/DIG_TAG_74" target="_blank"
