@@ -1,5 +1,15 @@
+@php
+    // $catchcopy_line1 = $catchcopy_line1 ?? 'No.1 Dance';
+    // $catchcopy_line2 = $catchcopy_line2 ?? 'Vocal Unit';
+    $catchcopy_line1 = $catchcopy_line1 ?? 'Hello';
+    $catchcopy_line2 = $catchcopy_line2 ?? 'World';
+@endphp
 <!DOCTYPE html>
 <html lang="ja" class="__variable_7073ab" style="--vh: 3.02px; --theme-color: #1ccaff; scroll-behavior: smooth;">
+<script>
+    window.CATCHCOPY_LINE1 = "{{ $catchcopy_line1 }}";
+    window.CATCHCOPY_LINE2 = "{{ $catchcopy_line2 }}";
+</script>
 <link type="text/css" id="dark-mode" rel="stylesheet" href="">
 <style type="text/css" id="dark-mode-сustom-style"></style>
 <style type="text/css" id="dark-mode-theme-changer-style"></style>
@@ -7,13 +17,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="preload" href="/_next/static/media/24f6ebe2756575bd-s.p.woff2" as="font" crossorigin=""
+    <link rel="preload" href="{{ url('_next/static/media/24f6ebe2756575bd-s.p.woff2') }}" as="font" crossorigin=""
         type="font/woff2">
     <link rel="stylesheet" href="{{ url('_next/static/css/b6b44f72ca5c5733.css') }}" data-precedence="next">
     <link rel="stylesheet" href="{{ url('_next/static/css/fecc8777f444e7d0.css') }}" data-precedence="next">
     <link rel="stylesheet" href="{{ url('_next/static/css/4f9a7f5030628621.css') }}" data-precedence="next">
     <link rel="stylesheet" href="{{ url('_next/static/css/07a098635536dd3e.css') }}" data-precedence="next">
-    <link rel="preload" as="script" fetchpriority="low" href="/_next/static/chunks/webpack-77e271fbdb558673.js">
+    <link rel="preload" as="script" fetchpriority="low"
+        href="{{ url('_next/static/chunks/webpack-77e271fbdb558673.js') }}">
     <script src="{{ url('_next/static/chunks/fd9d1056-d0146858c6309456.js') }}" async=""></script>
     <script src="{{ url('_next/static/chunks/117-adc68baa41f925a8.js') }}" async=""></script>
     <script src="{{ url('_next/static/chunks/main-app-d78d9de6600d23f1.js') }}" async=""></script>
@@ -37,16 +48,20 @@
     <meta name="twitter:description"
         content="にじさんじ所属VTuberユニット『VOLTACTION』（風楽奏斗/渡会雲雀/四季凪アキラ/セラフ・ダズルガーデン）No.1ダンスボーカルユニットを目指して活動中！">
     <meta name="twitter:image" content="https://www.voltaction-official.com/assets/ogp.jpg">
-    <link rel="icon" href="/assets/favicon.ico">
-    <link rel="apple-touch-icon" href="/assets/apple-icon.png">
+    <link rel="icon" href="{{ url('assets/favicon.ico') }}">
+    <link rel="apple-touch-icon" href="{{ url('assets/apple-icon.png') }}">
     <meta name="next-size-adjust">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/yakuhanjp@4.1.1/dist/css/yakuhanjp.css">
     <link rel="stylesheet" href="https://use.typekit.net/ahv0fda.css">
-    <script src="/_next/static/chunks/polyfills-42372ed130431b0a.js" nomodule=""></script>
-    <link rel="preload" href="{{ url('assets/img/top/keyvisual/ph_chara1_shadow.png') }}" as="image" fetchpriority="high">
-    <link rel="preload" href="{{ url('assets/img/top/keyvisual/ph_chara4_shadow.png') }}" as="image" fetchpriority="high">
-    <link rel="preload" href="{{ url('assets/img/top/keyvisual/ph_chara3_shadow.png') }}" as="image" fetchpriority="high">
-    <link rel="preload" href="{{ url('assets/img/top/keyvisual/ph_chara2_shadow.png') }}" as="image" fetchpriority="high">
+    <script src="{{ url('_next/static/chunks/polyfills-42372ed130431b0a.js') }}" nomodule=""></script>
+    <link rel="preload" href="{{ url('assets/img/top/keyvisual/ph_chara1_shadow.png') }}" as="image"
+        fetchpriority="high">
+    <link rel="preload" href="{{ url('assets/img/top/keyvisual/ph_chara4_shadow.png') }}" as="image"
+        fetchpriority="high">
+    <link rel="preload" href="{{ url('assets/img/top/keyvisual/ph_chara3_shadow.png') }}" as="image"
+        fetchpriority="high">
+    <link rel="preload" href="{{ url('assets/img/top/keyvisual/ph_chara2_shadow.png') }}" as="image"
+        fetchpriority="high">
     <link rel="preload" href="{{ url('assets/img/top/keyvisual/ph_chara1.png') }}" as="image" fetchpriority="high">
     <link rel="preload" href="{{ url('assets/img/top/keyvisual/ph_chara4.png') }}" as="image" fetchpriority="high">
     <link rel="preload" href="{{ url('assets/img/top/keyvisual/ph_chara3.png') }}" as="image" fetchpriority="high">
@@ -54,7 +69,7 @@
 </head>
 
 <body class="top" data-pagestart="1" data-intro="0" data-theme="water">
-    <script src="/_next/static/chunks/webpack-77e271fbdb558673.js" async=""></script>
+    <script src="{{ url('_next/static/chunks/webpack-77e271fbdb558673.js') }}" async=""></script>
     <script>
         (self.__next_f = self.__next_f || []).push([0]);
         self.__next_f.push([2, null])
@@ -111,17 +126,18 @@
         ])
     </script>
     <script id="_next-gtm-init" data-nscript="afterInteractive">
-        (function(w, l) {
-            w[l] = w[l] || [];
-            w[l].push({
-                'gtm.start': new Date().getTime(),
-                event: 'gtm.js'
-            });
+            (function (w, l) {
+                w[l] = w[l] || [];
+                w[l].push({
+                    'gtm.start': new Date().getTime(),
+                    event: 'gtm.js'
+                });
 
-        })(window, 'dataLayer');
+            })(window, 'dataLayer');
     </script>
     <script src="https://www.googletagmanager.com/gtm.js?id=GTM-5BFVV632" id="_next-gtm" data-ntpc="GTM"
-        data-nscript="afterInteractive"></script><next-route-announcer style="position: absolute;"></next-route-announcer>
+        data-nscript="afterInteractive"></script><next-route-announcer
+        style="position: absolute;"></next-route-announcer>
     <div class="l-wrapper">
         <div class="l-pagebg" data-in="0">
             <div class="l-pagebg__layer">
@@ -156,51 +172,29 @@
                 <div class="top_keyvisual__catchcopy___U4t4 c-font_aqva c-skew_rotate">
                     <div class="undefined">
                         <div class="top_keyvisual__catchcopy__line__EXQFd">
-                            <p data-text="dance" aria-label="No.1 Dance"
-                                style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">
-                                <span class="top_keyvisual__catchcopy__text__SJo6t"><span aria-hidden="true"><span
-                                            class="c-splitText" aria-hidden="true"
-                                            style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">N</span><span
-                                            class="c-splitText" aria-hidden="true"
-                                            style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">o</span><span
-                                            class="c-splitText" aria-hidden="true"
-                                            style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">.</span><span
-                                            class="c-splitText" aria-hidden="true"
-                                            style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">1</span></span>
-                                    <span aria-hidden="true"><span class="c-splitText" aria-hidden="true"
-                                            style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">D</span><span
-                                            class="c-splitText" aria-hidden="true"
-                                            style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">a</span><span
-                                            class="c-splitText" aria-hidden="true"
-                                            style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">n</span><span
-                                            class="c-splitText" aria-hidden="true"
-                                            style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">c</span><span
-                                            class="c-splitText" aria-hidden="true"
-                                            style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">e</span></span></span>
+                            <p data-text="dance" aria-label="{{ $catchcopy_line1 }}">
+                                <span class="top_keyvisual__catchcopy__text__SJo6t">
+                                    @foreach(explode(' ', $catchcopy_line1) as $word)
+                                        <span aria-hidden="true">
+                                            @foreach(mb_str_split($word) as $char)
+                                                <span class="c-splitText" aria-hidden="true">{{ $char }}</span>
+                                            @endforeach
+                                        </span>
+                                    @endforeach
+                                </span>
                             </p>
                         </div>
                         <div class="top_keyvisual__catchcopy__line__EXQFd">
-                            <p data-text="vocal" aria-label="Vocal Unit"
-                                style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">
-                                <span class="top_keyvisual__catchcopy__text__SJo6t"><span aria-hidden="true"><span
-                                            class="c-splitText" aria-hidden="true"
-                                            style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">V</span><span
-                                            class="c-splitText" aria-hidden="true"
-                                            style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">o</span><span
-                                            class="c-splitText" aria-hidden="true"
-                                            style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">c</span><span
-                                            class="c-splitText" aria-hidden="true"
-                                            style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">a</span><span
-                                            class="c-splitText" aria-hidden="true"
-                                            style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">l</span></span>
-                                    <span aria-hidden="true"><span class="c-splitText" aria-hidden="true"
-                                            style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">U</span><span
-                                            class="c-splitText" aria-hidden="true"
-                                            style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">n</span><span
-                                            class="c-splitText" aria-hidden="true"
-                                            style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">i</span><span
-                                            class="c-splitText" aria-hidden="true"
-                                            style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">t</span></span></span>
+                            <p data-text="vocal" aria-label="{{ $catchcopy_line2 }}">
+                                <span class="top_keyvisual__catchcopy__text__SJo6t">
+                                    @foreach(explode(' ', $catchcopy_line2) as $word)
+                                        <span aria-hidden="true">
+                                            @foreach(mb_str_split($word) as $char)
+                                                <span class="c-splitText" aria-hidden="true">{{ $char }}</span>
+                                            @endforeach
+                                        </span>
+                                    @endforeach
+                                </span>
                             </p>
                         </div>
                     </div>
@@ -209,77 +203,69 @@
                     <div class="top_keyvisual__ph__inner__RWnMR">
                         <div class="top_keyvisual__ph__shadow__j4xMW">
                             <div class="top_keyvisual__ph__item__5626N" data-charaid="1">
-                                <div><span><img alt="" fetchpriority="high" loading="eager" width="1897"
-                                            height="1547" decoding="async" data-nimg="1" class=""
-                                            src="/assets/img/top/keyvisual/ph_chara1_shadow.png"
+                                <div><span><img alt="" fetchpriority="high" loading="eager" width="1897" height="1547"
+                                            decoding="async" data-nimg="1" class=""
+                                            src="{{ url('assets/img/top/keyvisual/ph_chara1_shadow.png') }}"
                                             style="color: transparent; object-fit: cover;"></span></div>
                             </div>
                             <div class="top_keyvisual__ph__item__5626N" data-charaid="4">
-                                <div><span><img alt="" fetchpriority="high" loading="eager" width="1897"
-                                            height="1547" decoding="async" data-nimg="1" class=""
-                                            src="/assets/img/top/keyvisual/ph_chara4_shadow.png"
+                                <div><span><img alt="" fetchpriority="high" loading="eager" width="1897" height="1547"
+                                            decoding="async" data-nimg="1" class=""
+                                            src="{{ url('assets/img/top/keyvisual/ph_chara4_shadow.png') }}"
                                             style="color: transparent; object-fit: cover;"></span></div>
                             </div>
                             <div class="top_keyvisual__ph__item__5626N" data-charaid="3">
-                                <div><span><img alt="" fetchpriority="high" loading="eager" width="1897"
-                                            height="1547" decoding="async" data-nimg="1" class=""
-                                            src="/assets/img/top/keyvisual/ph_chara3_shadow.png"
+                                <div><span><img alt="" fetchpriority="high" loading="eager" width="1897" height="1547"
+                                            decoding="async" data-nimg="1" class=""
+                                            src="{{ url('assets/img/top/keyvisual/ph_chara3_shadow.png') }}"
                                             style="color: transparent; object-fit: cover;"></span></div>
                             </div>
                             <div class="top_keyvisual__ph__item__5626N" data-charaid="2">
-                                <div><span><img alt="" fetchpriority="high" loading="eager" width="1897"
-                                            height="1547" decoding="async" data-nimg="1" class=""
-                                            src="/assets/img/top/keyvisual/ph_chara2_shadow.png"
+                                <div><span><img alt="" fetchpriority="high" loading="eager" width="1897" height="1547"
+                                            decoding="async" data-nimg="1" class=""
+                                            src="{{ url('assets/img/top/keyvisual/ph_chara2_shadow.png') }}"
                                             style="color: transparent; object-fit: cover;"></span></div>
                             </div>
                         </div>
                         <div class="top_keyvisual__ph__chara__HeWiZ">
                             <div class="top_keyvisual__ph__item__5626N" data-charaid="1">
-                                <div><span class="top_keyvisual__ph__gray__N4kq_"><img alt=""
-                                            fetchpriority="high" loading="eager" width="1897" height="1547"
-                                            decoding="async" data-nimg="1" class=""
-                                            src="/assets/img/top/keyvisual/ph_chara1.png"
+                                <div><span class="top_keyvisual__ph__gray__N4kq_"><img alt="" fetchpriority="high"
+                                            loading="eager" width="1897" height="1547" decoding="async" data-nimg="1"
+                                            class="" src="{{ url('assets/img/top/keyvisual/ph_chara1.png') }}"
                                             style="color: transparent; object-fit: cover;"></span><span
-                                        class="top_keyvisual__ph__normal__QX7Wv"><img alt=""
-                                            fetchpriority="high" loading="eager" width="1897" height="1547"
-                                            decoding="async" data-nimg="1" class=""
-                                            src="/assets/img/top/keyvisual/ph_chara1.png"
+                                        class="top_keyvisual__ph__normal__QX7Wv"><img alt="" fetchpriority="high"
+                                            loading="eager" width="1897" height="1547" decoding="async" data-nimg="1"
+                                            class="" src="{{ url('assets/img/top/keyvisual/ph_chara1.png') }}"
                                             style="color: transparent; object-fit: cover;"></span></div>
                             </div>
                             <div class="top_keyvisual__ph__item__5626N" data-charaid="4">
-                                <div><span class="top_keyvisual__ph__gray__N4kq_"><img alt=""
-                                            fetchpriority="high" loading="eager" width="1897" height="1547"
-                                            decoding="async" data-nimg="1" class=""
-                                            src="/assets/img/top/keyvisual/ph_chara4.png"
+                                <div><span class="top_keyvisual__ph__gray__N4kq_"><img alt="" fetchpriority="high"
+                                            loading="eager" width="1897" height="1547" decoding="async" data-nimg="1"
+                                            class="" src="{{ url('assets/img/top/keyvisual/ph_chara4.png') }}"
                                             style="color: transparent; object-fit: cover;"></span><span
-                                        class="top_keyvisual__ph__normal__QX7Wv"><img alt=""
-                                            fetchpriority="high" loading="eager" width="1897" height="1547"
-                                            decoding="async" data-nimg="1" class=""
-                                            src="/assets/img/top/keyvisual/ph_chara4.png"
+                                        class="top_keyvisual__ph__normal__QX7Wv"><img alt="" fetchpriority="high"
+                                            loading="eager" width="1897" height="1547" decoding="async" data-nimg="1"
+                                            class="" src="{{ url('assets/img/top/keyvisual/ph_chara4.png') }}"
                                             style="color: transparent; object-fit: cover;"></span></div>
                             </div>
                             <div class="top_keyvisual__ph__item__5626N" data-charaid="3">
-                                <div><span class="top_keyvisual__ph__gray__N4kq_"><img alt=""
-                                            fetchpriority="high" loading="eager" width="1897" height="1547"
-                                            decoding="async" data-nimg="1" class=""
-                                            src="/assets/img/top/keyvisual/ph_chara3.png"
+                                <div><span class="top_keyvisual__ph__gray__N4kq_"><img alt="" fetchpriority="high"
+                                            loading="eager" width="1897" height="1547" decoding="async" data-nimg="1"
+                                            class="" src="{{ url('assets/img/top/keyvisual/ph_chara3.png') }}"
                                             style="color: transparent; object-fit: cover;"></span><span
-                                        class="top_keyvisual__ph__normal__QX7Wv"><img alt=""
-                                            fetchpriority="high" loading="eager" width="1897" height="1547"
-                                            decoding="async" data-nimg="1" class=""
-                                            src="/assets/img/top/keyvisual/ph_chara3.png"
+                                        class="top_keyvisual__ph__normal__QX7Wv"><img alt="" fetchpriority="high"
+                                            loading="eager" width="1897" height="1547" decoding="async" data-nimg="1"
+                                            class="" src="{{ url('assets/img/top/keyvisual/ph_chara3.png') }}"
                                             style="color: transparent; object-fit: cover;"></span></div>
                             </div>
                             <div class="top_keyvisual__ph__item__5626N" data-charaid="2">
-                                <div><span class="top_keyvisual__ph__gray__N4kq_"><img alt=""
-                                            fetchpriority="high" loading="eager" width="1897" height="1547"
-                                            decoding="async" data-nimg="1" class=""
-                                            src="/assets/img/top/keyvisual/ph_chara2.png"
+                                <div><span class="top_keyvisual__ph__gray__N4kq_"><img alt="" fetchpriority="high"
+                                            loading="eager" width="1897" height="1547" decoding="async" data-nimg="1"
+                                            class="" src="{{ url('assets/img/top/keyvisual/ph_chara2.png') }}"
                                             style="color: transparent; object-fit: cover;"></span><span
-                                        class="top_keyvisual__ph__normal__QX7Wv"><img alt=""
-                                            fetchpriority="high" loading="eager" width="1897" height="1547"
-                                            decoding="async" data-nimg="1" class=""
-                                            src="/assets/img/top/keyvisual/ph_chara2.png"
+                                        class="top_keyvisual__ph__normal__QX7Wv"><img alt="" fetchpriority="high"
+                                            loading="eager" width="1897" height="1547" decoding="async" data-nimg="1"
+                                            class="" src="{{ url('assets/img/top/keyvisual/ph_chara2.png') }}"
                                             style="color: transparent; object-fit: cover;"></span></div>
                             </div>
                         </div>
@@ -288,7 +274,7 @@
                 <div class="top_keyvisual__line__mYec5"></div>
                 <div class="top_keyvisual__navwarp__8D9Re">
                     <ul class="top_keyvisual__nav__PuypP c-font_aqva">
-                        <li class="top_keyvisual__nav__item__6y3hf"><a href="/news/" aria-label="News"><span
+                        <li class="top_keyvisual__nav__item__6y3hf"><a href="{{ url('news/') }}" aria-label="News"><span
                                     class="top_keyvisual__nav__item__inner__vyQFK c-hover_underline"><span
                                         aria-hidden="true"><span class="c-splitText" aria-hidden="true"
                                             style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">N</span><span
@@ -299,7 +285,8 @@
                                             class="c-splitText" aria-hidden="true"
                                             style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">s</span></span></span></a>
                         </li>
-                        <li class="top_keyvisual__nav__item__6y3hf"><a href="/profile/" aria-label="Profile"><span
+                        <li class="top_keyvisual__nav__item__6y3hf"><a href="{{ url('profile/') }}"
+                                aria-label="Profile"><span
                                     class="top_keyvisual__nav__item__inner__vyQFK c-hover_underline"><span
                                         aria-hidden="true"><span class="c-splitText" aria-hidden="true"
                                             style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">P</span><span
@@ -316,7 +303,7 @@
                                             class="c-splitText" aria-hidden="true"
                                             style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">e</span></span></span></a>
                         </li>
-                        <li class="top_keyvisual__nav__item__6y3hf"><a href="/discography/"
+                        <li class="top_keyvisual__nav__item__6y3hf"><a href="{{ url('discography/') }}"
                                 aria-label="Discography"><span
                                     class="top_keyvisual__nav__item__inner__vyQFK c-hover_underline"><span
                                         aria-hidden="true"><span class="c-splitText" aria-hidden="true"
@@ -371,9 +358,10 @@
                             <p class="c-toptitle__inner js-splittext"><span class="c-toptitle__line">What’s
                                     New?</span></p>
                         </div>
-                        <div class="top_latestnews__more__w_GHm c-hover_op c-visible_nrw"><a href="/news/"><img
-                                    alt="Read more" loading="lazy" width="185" height="34" decoding="async"
-                                    data-nimg="1" class="" src="/assets/img/common/ui/btn_more.svg"
+                        <div class="top_latestnews__more__w_GHm c-hover_op c-visible_nrw"><a
+                                href="{{ url('news/') }}"><img alt="Read more" loading="lazy" width="185" height="34"
+                                    decoding="async" data-nimg="1" class=""
+                                    src="{{ url('assets/img/common/ui/btn_more.svg') }}"
                                     style="color: transparent; object-fit: cover;"></a></div>
                     </div>
                     <div class="top_latestnews__main__Wn6UW">
@@ -483,15 +471,15 @@
                                 <div class="c-modal__close c-hover_op"><span class="c-modal__close__bar"></span><span
                                         class="c-modal__close__bar"></span></div>
                             </section>
-                            <div class="top_latestnews__more__w_GHm c-hover_op c-visible_wide"><a href="/news/"><img
-                                        alt="Read more" loading="lazy" width="185" height="34"
-                                        decoding="async" data-nimg="1" class=""
-                                        src="/assets/img/common/ui/btn_more.svg"
+                            <div class="top_latestnews__more__w_GHm c-hover_op c-visible_wide"><a
+                                    href="{{ url('news/') }}"><img alt="Read more" loading="lazy" width="185"
+                                        height="34" decoding="async" data-nimg="1" class=""
+                                        src="{{ url('assets/img/common/ui/btn_more.svg') }}"
                                         style="color: transparent; object-fit: cover;"></a></div>
                         </div>
                         <div class="top_latestnews__ri__OD2DW">
                             <div class="top_latestnews__item__RmS44"><a class="c-hover_op"
-                                    href="/news/lddxr3gahvd9/">
+                                    href="{{ url('news/lddxr3gahvd9/') }}">
                                     <div class="top_latestnews__item__header__3KVYt"><time datetime="2026-03-29"
                                             class="top_latestnews__item__header__date__e2_nD c-font_aqva"><span
                                                 class="c-skew_rotate">03.29</span></time>
@@ -505,7 +493,8 @@
                                         </p>
                                     </div>
                                 </a></div>
-                            <div class="top_latestnews__item__RmS44"><a class="c-hover_op" href="/news/mkpurwnfw/">
+                            <div class="top_latestnews__item__RmS44"><a class="c-hover_op"
+                                    href="{{ url('news/mkpurwnfw/') }}">
                                     <div class="top_latestnews__item__header__3KVYt"><time datetime="2026-03-29"
                                             class="top_latestnews__item__header__date__e2_nD c-font_aqva"><span
                                                 class="c-skew_rotate">03.29</span></time>
@@ -517,7 +506,8 @@
                                         </p>
                                     </div>
                                 </a></div>
-                            <div class="top_latestnews__item__RmS44"><a class="c-hover_op" href="/news/yd0t9ea42g/">
+                            <div class="top_latestnews__item__RmS44"><a class="c-hover_op"
+                                    href="{{ url('news/yd0t9ea42g/') }}">
                                     <div class="top_latestnews__item__header__3KVYt"><time datetime="2026-01-14"
                                             class="top_latestnews__item__header__date__e2_nD c-font_aqva"><span
                                                 class="c-skew_rotate">01.14</span></time>
@@ -539,17 +529,17 @@
                     <div class="top_profile__main__PT_xB">
                         <div class="c-toptitle -profile c-font_aqva">
                             <div class="c-toptitle__main">
-                                <h2 class="c-toptitle__inner js-splittext"><span
-                                        class="c-toptitle__line">Profile</span></h2>
+                                <h2 class="c-toptitle__inner js-splittext"><span class="c-toptitle__line">Profile</span>
+                                </h2>
                             </div>
                             <div class="c-toptitle__sholder c-skew_rotate">
                                 <p class="c-toptitle__inner js-splittext"><span class="c-toptitle__line">Who we
                                         are!</span></p>
                             </div>
                         </div>
-                        <div class="top_profile__more__e1410 c-hover_op"><a href="/profile/"><img alt="Read more"
-                                    loading="lazy" width="185" height="34" decoding="async" data-nimg="1"
-                                    class="" src="/assets/img/common/ui/btn_more.svg"
+                        <div class="top_profile__more__e1410 c-hover_op"><a href="{{ url('profile/') }}"><img
+                                    alt="Read more" loading="lazy" width="185" height="34" decoding="async"
+                                    data-nimg="1" class="" src="{{ url('assets/img/common/ui/btn_more.svg') }}"
                                     style="color: transparent; object-fit: cover;"></a></div>
                         <p class="top_profile__catchcopy__9RgiF">
                             <span>狙うはNo.1ダンスボーカルユニット!</span><span>狙うはNo.1ダンスボーカルユニット!</span>
@@ -560,50 +550,52 @@
                     <div class="top_profile__members__OX3Hj">
                         <p class="top_profile__members__team__Ocaca"><span><img alt="Read more" loading="lazy"
                                     width="436" height="292" decoding="async" data-nimg="1" class=""
-                                    src="/assets/img/top/profile/logo_voltaction.svg"
+                                    src="{{ url('assets/img/top/profile/logo_voltaction.svg') }}"
                                     style="color: transparent; object-fit: cover;"></span></p>
-                        <div class="top_profile__members__chara__HJeW2" data-charaid="1"><a href="/profile/#hibari">
-                                <div class="top_profile__members__charaimg__hg8je"><span><img alt=""
-                                            loading="lazy" width="193" height="532" decoding="async"
-                                            data-nimg="1" class="" src="/assets/img/top/profile/chara1.png"
+                        <div class="top_profile__members__chara__HJeW2" data-charaid="1"><a
+                                href="{{ url('profile/#hibari') }}">
+                                <div class="top_profile__members__charaimg__hg8je"><span><img alt="" loading="lazy"
+                                            width="193" height="532" decoding="async" data-nimg="1" class=""
+                                            src="{{ url('assets/img/top/profile/chara1.png') }}"
                                             style="color: transparent; object-fit: cover;"></span></div>
                                 <p class="top_profile__members__charaname__l5lOW"><span><img alt="渡会雲雀 Watarai Hibari"
-                                            loading="lazy" width="145" height="52" decoding="async"
-                                            data-nimg="1" class=""
-                                            src="/assets/img/top/profile/chara1_name.svg"
+                                            loading="lazy" width="145" height="52" decoding="async" data-nimg="1"
+                                            class="" src="{{ url('assets/img/top/profile/chara1_name.svg') }}"
                                             style="color: transparent; object-fit: cover;"></span></p>
                             </a></div>
-                        <div class="top_profile__members__chara__HJeW2" data-charaid="3"><a href="/profile/#akira">
-                                <div class="top_profile__members__charaimg__hg8je"><span><img alt=""
-                                            loading="lazy" width="234" height="529" decoding="async"
-                                            data-nimg="1" class="" src="/assets/img/top/profile/chara3.png"
+                        <div class="top_profile__members__chara__HJeW2" data-charaid="3"><a
+                                href="{{ url('profile/#akira') }}">
+                                <div class="top_profile__members__charaimg__hg8je"><span><img alt="" loading="lazy"
+                                            width="234" height="529" decoding="async" data-nimg="1" class=""
+                                            src="{{ url('assets/img/top/profile/chara3.png') }}"
                                             style="color: transparent; object-fit: cover;"></span></div>
                                 <p class="top_profile__members__charaname__l5lOW"><span><img
-                                            alt="四季凪アキラ Shikinagi Akira" loading="lazy" width="164"
-                                            height="54" decoding="async" data-nimg="1" class=""
-                                            src="/assets/img/top/profile/chara3_name.svg"
+                                            alt="四季凪アキラ Shikinagi Akira" loading="lazy" width="164" height="54"
+                                            decoding="async" data-nimg="1" class=""
+                                            src="{{ url('assets/img/top/profile/chara3_name.svg') }}"
                                             style="color: transparent; object-fit: cover;"></span></p>
                             </a></div>
-                        <div class="top_profile__members__chara__HJeW2" data-charaid="2"><a href="/profile/#kanato">
-                                <div class="top_profile__members__charaimg__hg8je"><span><img alt=""
-                                            loading="lazy" width="200" height="552" decoding="async"
-                                            data-nimg="1" class="" src="/assets/img/top/profile/chara2.png"
+                        <div class="top_profile__members__chara__HJeW2" data-charaid="2"><a
+                                href="{{ url('profile/#kanato') }}">
+                                <div class="top_profile__members__charaimg__hg8je"><span><img alt="" loading="lazy"
+                                            width="200" height="552" decoding="async" data-nimg="1" class=""
+                                            src="{{ url('assets/img/top/profile/chara2.png') }}"
                                             style="color: transparent; object-fit: cover;"></span></div>
                                 <p class="top_profile__members__charaname__l5lOW"><span><img alt="風楽奏斗 Fura Kanato"
-                                            loading="lazy" width="125" height="52" decoding="async"
-                                            data-nimg="1" class=""
-                                            src="/assets/img/top/profile/chara2_name.svg"
+                                            loading="lazy" width="125" height="52" decoding="async" data-nimg="1"
+                                            class="" src="{{ url('assets/img/top/profile/chara2_name.svg') }}"
                                             style="color: transparent; object-fit: cover;"></span></p>
                             </a></div>
-                        <div class="top_profile__members__chara__HJeW2" data-charaid="4"><a href="/profile/#seraph">
-                                <div class="top_profile__members__charaimg__hg8je"><span><img alt=""
-                                            loading="lazy" width="220" height="557" decoding="async"
-                                            data-nimg="1" class="" src="/assets/img/top/profile/chara4.png"
+                        <div class="top_profile__members__chara__HJeW2" data-charaid="4"><a
+                                href="{{ url('profile/#seraph') }}">
+                                <div class="top_profile__members__charaimg__hg8je"><span><img alt="" loading="lazy"
+                                            width="220" height="557" decoding="async" data-nimg="1" class=""
+                                            src="{{ url('assets/img/top/profile/chara4.png') }}"
                                             style="color: transparent; object-fit: cover;"></span></div>
                                 <p class="top_profile__members__charaname__l5lOW"><span><img
-                                            alt="セラフ・ダズルガーデン Seraph Dazzlegarden" loading="lazy" width="220"
-                                            height="87" decoding="async" data-nimg="1" class=""
-                                            src="/assets/img/top/profile/chara4_name.svg"
+                                            alt="セラフ・ダズルガーデン Seraph Dazzlegarden" loading="lazy" width="220" height="87"
+                                            decoding="async" data-nimg="1" class=""
+                                            src="{{ url('assets/img/top/profile/chara4_name.svg') }}"
                                             style="color: transparent; object-fit: cover;"></span></p>
                             </a></div>
                     </div>
@@ -623,17 +615,16 @@
                             </div>
                         </div>
                         <div class="top_discography__more__fExMM c-hover_op c-visible_wide"><a
-                                href="/discography/"><img alt="Read more" loading="lazy" width="185"
+                                href="{{ url('discography/') }}"><img alt="Read more" loading="lazy" width="185"
                                     height="34" decoding="async" data-nimg="1" class=""
-                                    src="/assets/img/common/ui/btn_more.svg"
+                                    src="{{ url('assets/img/common/ui/btn_more.svg') }}"
                                     style="color: transparent; object-fit: cover;"></a></div>
                     </div>
                     <div class="top_discography__body__coM3Y">
                         <div class="top_discography__ph__4lPdP">
                             <div class="top_discography__ph__inner__HAxgN"><a
-                                    href="/discography/xxty-i-q487v/"><span><img alt="" loading="lazy"
-                                            width="720" height="720" decoding="async" data-nimg="1"
-                                            class=""
+                                    href="{{ url('discography/xxty-i-q487v/') }}"><span><img alt="" loading="lazy"
+                                            width="720" height="720" decoding="async" data-nimg="1" class=""
                                             src="https://images.microcms-assets.io/assets/42675a2dd37a4f2695ef745dd11e3bb7/792944d3e2b6400085307bdbbd23a8ae/CrashingWinners.jpg?w=720&amp;format=webp"
                                             style="color: transparent; object-fit: cover;"></span></a></div>
                         </div>
@@ -644,18 +635,17 @@
                             </div>
                             <p class="top_discography__info__name__Ooqur">Crashing Winners</p>
                             <div class="top_discography__more__fExMM c-hover_op c-visible_nrw"><a
-                                    href="/discography/"><img alt="Read more" loading="lazy" width="185"
+                                    href="{{ url('discography/') }}"><img alt="Read more" loading="lazy" width="185"
                                         height="34" decoding="async" data-nimg="1" class=""
-                                        src="/assets/img/common/ui/btn_more.svg"
+                                        src="{{ url('assets/img/common/ui/btn_more.svg') }}"
                                         style="color: transparent; object-fit: cover;"></a></div>
                         </div>
                     </div>
                 </section>
             </div>
         </main>
-        <h1 class="top_topHeader__title__9uhJ2"><span><img alt="VOLTACTION" loading="lazy" width="238"
-                    height="143" decoding="async" data-nimg="1" class=""
-                    src="/assets/img/common/header/logo_site.svg"
+        <h1 class="top_topHeader__title__9uhJ2"><span><img alt="VOLTACTION" loading="lazy" width="238" height="143"
+                    decoding="async" data-nimg="1" class="" src="{{ url('assets/img/common/header/logo_site.svg') }}"
                     style="color: transparent; object-fit: cover;"></span></h1>
         <ul class="top_topHeader__sns___KWza c-font_aqva">
             <li class="top_topHeader__sns__item__0OrXo"><a
@@ -677,8 +667,8 @@
                             style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">e</span></span></a>
             </li>
             <li class="top_topHeader__sns__item__0OrXo"><a href="https://x.com/VOLTACTION_info" target="_blank"
-                    rel="noopener noreferrer" class="c-hover_underline" aria-label="X"><span
-                        aria-hidden="true"><span class="c-splitText" aria-hidden="true"
+                    rel="noopener noreferrer" class="c-hover_underline" aria-label="X"><span aria-hidden="true"><span
+                            class="c-splitText" aria-hidden="true"
                             style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">X</span></span></a>
             </li>
             <li class="top_topHeader__sns__item__0OrXo"><a href="https://www.tiktok.com/@voltaction" target="_blank"
@@ -721,13 +711,15 @@
         <footer class="l-footer">
             <div class="l-footer__le">
                 <ul class="l-footer__nav c-font_aqva">
-                    <li class="l-footer__nav__item"><a href="/"><span class="c-hover_underline">Home</span></a>
+                    <li class="l-footer__nav__item"><a href="{{ url('/') }}"><span
+                                class="c-hover_underline">Home</span></a>
                     </li>
-                    <li class="l-footer__nav__item"><a href="/news/"><span class="c-hover_underline">News</span></a>
+                    <li class="l-footer__nav__item"><a href="{{ url('news/') }}"><span
+                                class="c-hover_underline">News</span></a>
                     </li>
-                    <li class="l-footer__nav__item"><a href="/profile/"><span
+                    <li class="l-footer__nav__item"><a href="{{ url('profile/') }}"><span
                                 class="c-hover_underline">Profile</span></a></li>
-                    <li class="l-footer__nav__item"><a href="/discography/"><span
+                    <li class="l-footer__nav__item"><a href="{{ url('discography/') }}"><span
                                 class="c-hover_underline">Discography</span></a></li>
                     <li class="l-footer__nav__item"><a href="https://shop.nijisanji.jp/DIG_TAG_74" target="_blank"
                             rel="noopener noreferrer" class="l-footer__nav__external"><span
@@ -746,22 +738,22 @@
             </div>
             <div class="l-footer__ri">
                 <ul class="l-footer__logo">
-                    <li class="l-footer__logo__nijisanji c-hover_op"><a href="https://www.nijisanji.jp/"
-                            target="_blank" rel="noopener noreferrer"><img alt="" loading="lazy"
-                                width="138" height="35" decoding="async" data-nimg="1" class=""
-                                src="/assets/img/common/footer/logo_nijisanji.svg"
+                    <li class="l-footer__logo__nijisanji c-hover_op"><a href="https://www.nijisanji.jp/" target="_blank"
+                            rel="noopener noreferrer"><img alt="" loading="lazy" width="138" height="35"
+                                decoding="async" data-nimg="1" class=""
+                                src="{{ url('assets/img/common/footer/logo_nijisanji.svg') }}"
                                 style="color: transparent; object-fit: cover;"></a></li>
                     <li class="l-footer__logo__anycolor c-hover_op"><a href="https://www.anycolor.co.jp/"
-                            target="_blank" rel="noopener noreferrer"><img alt="" loading="lazy"
-                                width="58" height="44" decoding="async" data-nimg="1" class=""
-                                src="/assets/img/common/footer/logo_anycolor.svg"
+                            target="_blank" rel="noopener noreferrer"><img alt="" loading="lazy" width="58" height="44"
+                                decoding="async" data-nimg="1" class=""
+                                src="{{ url('assets/img/common/footer/logo_anycolor.svg') }}"
                                 style="color: transparent; object-fit: cover;"></a></li>
                 </ul>
                 <p class="l-footer__copyright c-font_aqva">©ANYCOLOR, Inc.</p>
             </div>
         </footer>
-        <p class="l-footer__pageup"><img alt="" loading="lazy" width="72" height="42"
-                decoding="async" data-nimg="1" class="" src="/assets/img/common/ui/btn_pageup.svg"
+        <p class="l-footer__pageup"><img alt="" loading="lazy" width="72" height="42" decoding="async" data-nimg="1"
+                class="" src="{{ url('assets/img/common/ui/btn_pageup.svg') }}"
                 style="color: transparent; object-fit: cover;"></p>
     </div>
 </body>
