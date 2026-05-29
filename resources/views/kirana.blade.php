@@ -3,15 +3,23 @@
     $catchcopy_line2 = $catchcopy_line2 ?? 'My World!';
     $profile_title = $profile_title ?? 'Profil';
     $profile_subtitle = $profile_subtitle ?? 'Siapa Gue!';
-@endphp
-<!DOCTYPE html>
-<html lang="ja" class="__variable_7073ab" style="--vh: 3.02px; --theme-color: #1ccaff; scroll-behavior: smooth;">
-<script>
+    $disco_title = $disco_title ?? 'Discography';
+    $disco_title_1 = $disco_title_1 ?? 'Disco';
+    $disco_title_2 = $disco_title_2 ?? 'Graphy';
+    $disco_subtitle = $disco_subtitle ?? 'New Release!';
+    @endphp
+    <!DOCTYPE html>
+    <html lang="ja" class="__variable_7073ab" style="--vh: 3.02px; --theme-color: #1ccaff; scroll-behavior: smooth;">
+    <script>
     window.CATCHCOPY_LINE1 = "{{ $catchcopy_line1 }}";
     window.CATCHCOPY_LINE2 = "{{ $catchcopy_line2 }}";
     window.PROFILE_TITLE = "{{ $profile_title }}";
     window.PROFILE_SUBTITLE = "{{ $profile_subtitle }}";
-</script>
+    window.DISCO_TITLE = "{{ $disco_title }}";
+    window.DISCO_TITLE_1 = "{{ $disco_title_1 }}";
+    window.DISCO_TITLE_2 = "{{ $disco_title_2 }}";
+    window.DISCO_SUBTITLE = "{{ $disco_subtitle }}";
+    </script>
 <style>
     /* Force catchcopy visibility to bypass intro/animation delays */
     .top_keyvisual__catchcopy__inner {
@@ -25,8 +33,7 @@
         opacity: 1 !important;
         visibility: visible !important;
         display: block !important;
-        /* Ensure lines stack vertically */
-        width: 100% !important;
+        /* Ensure lines stack vertically without occupying full width if possible */
     }
 
     .top_keyvisual__catchcopy__text__SJo6t,
@@ -36,9 +43,32 @@
         display: inline-block !important;
     }
 
+    /* Restore clickability to the hero section and navigation */
+    .top_keyvisual__TJ2oe {
+        pointer-events: auto !important;
+    }
+    
+    .top_keyvisual__navwarp__8D9Re {
+        z-index: 1000 !important;
+        position: absolute !important; /* Restore to absolute as per original CSS */
+        pointer-events: auto !important;
+    }
+    
+    .top_keyvisual__nav__PuypP,
+    .top_keyvisual__nav__item__6y3hf,
+    .top_keyvisual__nav__PuypP a {
+        pointer-events: auto !important;
+    }
+
+    /* Keep background elements from blocking clicks if they overlap */
+    .top_keyvisual__ph__J5qRC,
+    .l-pagebg {
+        pointer-events: none !important;
+    }
+
     /* Ensure no transparent overlays are blocking the view */
     [data-intro="0"] .top_keyvisual__TJ2oe {
-        pointer-events: none !important;
+        pointer-events: auto !important;
     }
 </style>
 <script>
@@ -108,6 +138,56 @@
     <link rel="preload" href="{{ url('assets/img/top/keyvisual/ph_chara4.png') }}" as="image" fetchpriority="high">
     <link rel="preload" href="{{ url('assets/img/top/keyvisual/ph_chara3.png') }}" as="image" fetchpriority="high">
     <link rel="preload" href="{{ url('assets/img/top/keyvisual/ph_chara2.png') }}" as="image" fetchpriority="high">
+    <style>
+        /* Force catchcopy visibility to bypass intro/animation delays */
+        .top_keyvisual__catchcopy__inner {
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: flex-start !important;
+            white-space: normal !important;
+        }
+
+        .top_keyvisual__catchcopy__line__EXQFd {
+            opacity: 1 !important;
+            visibility: visible !important;
+            display: block !important;
+        }
+
+        .top_keyvisual__catchcopy__text__SJo6t,
+        .c-splitText {
+            opacity: 1 !important;
+            visibility: visible !important;
+            display: inline-block !important;
+        }
+
+        /* Restore clickability to the hero section and navigation */
+        .top_keyvisual__TJ2oe, 
+        .top_keyvisual__navwarp__8D9Re,
+        .top_keyvisual__navwarp__8D9Re *,
+        .top_keyvisual__nav__PuypP,
+        .top_keyvisual__nav__item__6y3hf,
+        .top_keyvisual__nav__PuypP a {
+            pointer-events: auto !important;
+            visibility: visible !important;
+        }
+        
+        .top_keyvisual__navwarp__8D9Re {
+            z-index: 99999 !important;
+            position: absolute !important;
+        }
+
+        /* Keep background elements from blocking clicks if they overlap */
+        .top_keyvisual__ph__J5qRC,
+        .l-pagebg,
+        .top_keyvisual__catchcopy___U4t4 {
+            pointer-events: none !important;
+        }
+
+        /* Ensure no transparent overlays are blocking the view */
+        [data-intro="0"] .top_keyvisual__TJ2oe {
+            pointer-events: auto !important;
+        }
+    </style>
 </head>
 
 <body class="top" data-pagestart="1" data-intro="1" data-theme="water">
@@ -344,7 +424,7 @@
                                     </span></span></a>
                         </li>
                         <li class="top_keyvisual__nav__item__6y3hf"><a href="{{ url('discography/') }}"
-                                aria-label="Discography"><span
+                                aria-label="{{ $disco_title }}"><span
                                     class="top_keyvisual__nav__item__inner__vyQFK c-hover_underline"><span
                                         aria-hidden="true"><span class="c-splitText" aria-hidden="true"
                                             style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">D</span><span
@@ -648,11 +728,11 @@
                         <div class="c-toptitle -discography c-font_aqva">
                             <div class="c-toptitle__main">
                                 <h2 class="c-toptitle__inner js-splittext"><span
-                                        class="c-toptitle__line">Disco<br>Graphy</span></h2>
+                                        class="c-toptitle__line">{{ $disco_title_1 }}<br>{{ $disco_title_2 }}</span></h2>
                             </div>
                             <div class="c-toptitle__sholder c-skew_rotate">
-                                <p class="c-toptitle__inner js-splittext"><span class="c-toptitle__line">New
-                                        Release!</span></p>
+                                <p class="c-toptitle__inner js-splittext"><span
+                                        class="c-toptitle__line">{{ $disco_subtitle }}</span></p>
                             </div>
                         </div>
                         <div class="top_discography__more__fExMM c-hover_op c-visible_wide"><a
@@ -761,7 +841,7 @@
                     <li class="l-footer__nav__item"><a href="{{ url('profile/') }}"><span
                                 class="c-hover_underline">{{ $profile_title }}</span></a></li>
                     <li class="l-footer__nav__item"><a href="{{ url('discography/') }}"><span
-                                class="c-hover_underline">Discography</span></a></li>
+                                class="c-hover_underline">{{ $disco_title }}</span></a></li>
                     <li class="l-footer__nav__item"><a href="https://shop.nijisanji.jp/DIG_TAG_74" target="_blank"
                             rel="noopener noreferrer" class="l-footer__nav__external"><span
                                 class="c-hover_underline">Goods</span></a></li>
