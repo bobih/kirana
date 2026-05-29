@@ -6,11 +6,11 @@
     $disco_title = $disco_title ?? 'Discography';
     $disco_title_1 = $disco_title_1 ?? 'Disco';
     $disco_title_2 = $disco_title_2 ?? 'Graphy';
-    $disco_subtitle = $disco_subtitle ?? 'New Release!';
-    @endphp
-    <!DOCTYPE html>
-    <html lang="ja" class="__variable_7073ab" style="--vh: 3.02px; --theme-color: #1ccaff; scroll-behavior: smooth;">
-    <script>
+    $disco_subtitle = $disco_subtitle ?? 'Terbaru!';
+@endphp
+<!DOCTYPE html>
+<html lang="ja" class="__variable_7073ab" style="--vh: 3.02px; --theme-color: #1ccaff; scroll-behavior: smooth;">
+<script>
     window.CATCHCOPY_LINE1 = "{{ $catchcopy_line1 }}";
     window.CATCHCOPY_LINE2 = "{{ $catchcopy_line2 }}";
     window.PROFILE_TITLE = "{{ $profile_title }}";
@@ -19,7 +19,7 @@
     window.DISCO_TITLE_1 = "{{ $disco_title_1 }}";
     window.DISCO_TITLE_2 = "{{ $disco_title_2 }}";
     window.DISCO_SUBTITLE = "{{ $disco_subtitle }}";
-    </script>
+</script>
 <style>
     /* Force catchcopy visibility to bypass intro/animation delays */
     .top_keyvisual__catchcopy__inner {
@@ -47,13 +47,14 @@
     .top_keyvisual__TJ2oe {
         pointer-events: auto !important;
     }
-    
+
     .top_keyvisual__navwarp__8D9Re {
         z-index: 1000 !important;
-        position: absolute !important; /* Restore to absolute as per original CSS */
+        position: absolute !important;
+        /* Restore to absolute as per original CSS */
         pointer-events: auto !important;
     }
-    
+
     .top_keyvisual__nav__PuypP,
     .top_keyvisual__nav__item__6y3hf,
     .top_keyvisual__nav__PuypP a {
@@ -161,7 +162,7 @@
         }
 
         /* Restore clickability to the hero section and navigation */
-        .top_keyvisual__TJ2oe, 
+        .top_keyvisual__TJ2oe,
         .top_keyvisual__navwarp__8D9Re,
         .top_keyvisual__navwarp__8D9Re *,
         .top_keyvisual__nav__PuypP,
@@ -170,7 +171,7 @@
             pointer-events: auto !important;
             visibility: visible !important;
         }
-        
+
         .top_keyvisual__navwarp__8D9Re {
             z-index: 99999 !important;
             position: absolute !important;
@@ -728,7 +729,8 @@
                         <div class="c-toptitle -discography c-font_aqva">
                             <div class="c-toptitle__main">
                                 <h2 class="c-toptitle__inner js-splittext"><span
-                                        class="c-toptitle__line">{{ $disco_title_1 }}<br>{{ $disco_title_2 }}</span></h2>
+                                        class="c-toptitle__line">{{ $disco_title_1 }}<br>{{ $disco_title_2 }}</span>
+                                </h2>
                             </div>
                             <div class="c-toptitle__sholder c-skew_rotate">
                                 <p class="c-toptitle__inner js-splittext"><span
