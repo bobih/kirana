@@ -1,6 +1,6 @@
 @php
-    $catchcopy_line1 = $catchcopy_line1 ?? 'Welcome to';
-    $catchcopy_line2 = $catchcopy_line2 ?? 'My World!';
+    $catchcopy_line1 = $catchcopy_line1 ?? 'Hello';
+    $catchcopy_line2 = $catchcopy_line2 ?? 'World!';
     $profile_title = $profile_title ?? 'Profil';
     $profile_subtitle = $profile_subtitle ?? 'Siapa Gue!';
     $disco_title = $disco_title ?? 'Discography';
@@ -182,6 +182,16 @@
         .l-pagebg,
         .top_keyvisual__catchcopy___U4t4 {
             pointer-events: none !important;
+        }
+
+        /* Hide the site logo */
+        .top_topHeader__title__9uhJ2 {
+            display: none !important;
+        }
+
+        /* Hide the VOLTACTION logo in profile section */
+        .top_profile__members__team__Ocaca {
+            display: none !important;
         }
 
         /* Ensure no transparent overlays are blocking the view */
@@ -670,10 +680,6 @@
                             ニット「VOLTACTION」。 <br>「歌・ダンス・配信を通じて人々の日常を幸せにする」という共通の思想のもと、日々活動している。</p>
                     </div>
                     <div class="top_profile__members__OX3Hj">
-                        <p class="top_profile__members__team__Ocaca"><span><img alt="Read more" loading="lazy"
-                                    width="436" height="292" decoding="async" data-nimg="1" class=""
-                                    src="{{ url('assets/img/top/profile/logo_voltaction.svg') }}"
-                                    style="color: transparent; object-fit: cover;"></span></p>
                         <div class="top_profile__members__chara__HJeW2" data-charaid="1"><a
                                 href="{{ url('profile/#hibari') }}">
                                 <div class="top_profile__members__charaimg__hg8je"><span><img alt="" loading="lazy"
@@ -767,9 +773,6 @@
                 </section>
             </div>
         </main>
-        <h1 class="top_topHeader__title__9uhJ2"><span><img alt="VOLTACTION" loading="lazy" width="238" height="143"
-                    decoding="async" data-nimg="1" class="" src="{{ url('assets/img/common/header/logo_site.svg') }}"
-                    style="color: transparent; object-fit: cover;"></span></h1>
         <ul class="top_topHeader__sns___KWza c-font_aqva">
             <li class="top_topHeader__sns__item__0OrXo"><a
                     href="https://www.youtube.com/channel/UCNRh9kkByBTYLo0IJupnAug" target="_blank"
